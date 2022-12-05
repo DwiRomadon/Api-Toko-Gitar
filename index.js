@@ -20,41 +20,6 @@ app.use(cors())
 
 app.use('/user', require('./routes/user'))
 
-app.get('/test', (req, res) => {
-    const nama = 'anisa'
-    let prodi = ''
-    if (nama === 'anisa') {
-        prodi = 'sistem informasi'
-    } else {
-        prodi = 'informatika'
-    }
-
-    const mahasiswa = {
-        nama: 'anisa',
-        npm: 20411016,
-        prodi: 'sistem informasi',
-        hobi: 'tidur',
-        keluarga: {
-            adik: 1
-        }
-    }
-
-    res.json({
-        test: 'Berhasil',
-        nama: nama,
-        prodi: prodi,
-        coba: mahasiswa.keluarga.adik,
-        biodata: mahasiswa
-
-    })
-})
-
-app.get('/mahasiswa/:npm', (req, res) => {
-    res.json({
-        npm: req.params.npm
-    })
-})
-
 app.listen(5001, () => {
     console.log('Berhasil Jalan')
 })
