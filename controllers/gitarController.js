@@ -8,7 +8,8 @@ exports.create = (data) =>
           sukses: true,
           msg: 'Berhasil Menyimpan Data'
         })
-      }).catch(() => {
+      }).catch((e) => {
+        console.log(e)
         reject({
           sukses: false,
           msg: 'Gagal Menyimpan Data'

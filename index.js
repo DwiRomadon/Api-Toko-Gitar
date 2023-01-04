@@ -24,6 +24,7 @@ app.use(express.static(directory))
 
 app.use('/user', require('./routes/user'))
 app.use('/gitar', require('./routes/gitar'))
+app.use('/transaksi', require('./routes/transaksi'))
 
 app.listen(5001, () => {
     console.log('Berhasil Jalan')
